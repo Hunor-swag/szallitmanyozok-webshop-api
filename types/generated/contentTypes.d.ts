@@ -407,6 +407,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     singularName: 'product';
     pluralName: 'products';
     displayName: 'Product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -414,9 +415,12 @@ export interface ApiProductProduct extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required & Attribute.Unique;
     description: Attribute.Blocks;
-    image: Attribute.Media & Attribute.Required;
     currency: Attribute.String & Attribute.Required;
     price: Attribute.Integer & Attribute.Required;
+    type: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'product'>;
+    imageSrc: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
