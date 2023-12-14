@@ -33,8 +33,13 @@
       "required": true,
       "default": "product"
     },
-    "imageSrc": {
-      "type": "string"
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
