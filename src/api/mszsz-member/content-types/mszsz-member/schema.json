@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mszsz_members",
+  "info": {
+    "singularName": "mszsz-member",
+    "pluralName": "mszsz-members",
+    "displayName": "MSZSZ_Member"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "tax_number": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
